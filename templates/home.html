@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SalaryPredictor</title>
+    <style>
+        h2{
+            margin-top:70px;
+            font-size:40px;
+            text-align:center;
+            color:white;
+        }
+        h3{
+            font-family:"Times New Roman", Times, serif;
+            font-size:25px;
+            text-align:center;
+            color:white;
+         }
+         input[type=submit]{
+            background-color:#000000;
+            color:white;
+            cursor:pointer;
+            padding:16px 32px;
+
+         }
+
+         body{
+            background-image:url("{%static 'download-4.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size: cover;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<h3> Welcome to Movie Recommendation Application</h3>
+<h2>Home Page</h2>
+
+<form action="predict">
+    <input type="submit" value="START">
+</form>
+
+</body>
+</html>

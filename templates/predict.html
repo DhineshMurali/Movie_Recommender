@@ -1,0 +1,101 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Prediction</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image:url("{%static 'download-5.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size: cover;
+            text-align:center;
+        }
+        input[type=submit]{
+            background-color:#000000;
+            color:white;
+            cursor:pointer;
+            padding:16px 32px;
+
+         }
+
+        h2,h4{
+        color:white;
+        }
+    </style>
+</head>
+<body>
+<!-- <h4>This page helps you to predict your salary based on graduation and experience</h4> -->
+ <h4>This page helps you to recommend movies based on your interest</h4>
+
+    <div class="main">
+        <h2>Movie Recommendation Webpage</h2>
+        <form action="result">
+            <div class="row">
+                <div style="background-color:Bisque;">
+                    <p>Enter the movie ID</p>
+                    <input type="number" name="n1" required>
+                </div>
+                <!--
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>10th Percentage</p>
+                    <input type="text" name="n2" required>
+                </div>
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>12th Percentage</p>
+                    <input type="text" name="n3" required>
+                </div>
+                -->
+            </div>
+            <!--
+            <div class="row">
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>College Tier [1,2]</p>
+                    <input type="number" name="n4" required>
+                </div>
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>Degree ['B.Tech/B.E.': 1, 'M.Tech./M.E.': 2, 'MCA': 3, 'M.Sc. (Tech.)': 4]</p>
+                    <input type="number" name="n5" required>
+                </div>
+                <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>College GPA</p>
+                    <input type="text" name="n6" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>Graduation Year</p>
+                    <input type="number" name="n7" required>
+                </div>
+                <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>Domain Knowledge [0.0,1.0]</p>
+                    <input type="text" name="n8" required>
+                </div>
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>Agreeableness [0.0,1.0]</p>
+                    <input type="text" name="n9" required>
+                </div>
+                 <div class="col-sm-4" style="background-color:Bisque;">
+                    <p>Openness to experience[-5.0,5.0]</p>
+                    <input type="text" name="n10" required>
+                </div>
+            </div> -->
+            <div class="row">
+                <input type="submit" value="PREDICT">
+            </div>
+        </form>
+        <div class="row">
+            <!--<h2>{{result2}}</h2>-->
+            <div class="box">
+            <h2>The recommended movie for {{mov_name}}</h2>
+            <h4>{% for a in result2 %} {{a}} <br/>{% endfor %}</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
